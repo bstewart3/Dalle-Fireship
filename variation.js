@@ -9,7 +9,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const src = "./mona.png";
+const src = "../img/1667955922987.png";
 
 const result = await openai.createImageVariation(
   createReadStream(`./img/${src}`),
