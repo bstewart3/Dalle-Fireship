@@ -1,13 +1,15 @@
 import { writeFileSync } from "fs";
 import { Configuration, OpenAIApi } from "openai";
 
+import { apiKey } from "./apiKey";
+
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: { apiKey },
 });
 
 const openai = new OpenAIApi(configuration);
 
-const prompt = "a zia symbol with deep space as the background";
+const prompt = "happiness";
 
 const result = await openai.createImage({
   prompt,
